@@ -52,6 +52,15 @@
         .service-card h3{font-size:1.1rem;margin-bottom:4px;font-weight:600}
         .service-card .subtitle{font-size:0.9rem;color:#d4a574;font-weight:500;margin-bottom:12px}
         .service-card p{color:var(--muted);font-size:0.95rem;line-height:1.5}
+        .service-card .learn-more{display:inline-block;margin-top:12px;padding:0.5rem 1rem;background:var(--accent-gold);color:#fff;text-decoration:none;border-radius:6px;font-weight:600;font-size:0.9rem;transition:opacity 0.2s}
+        .service-card .learn-more:hover{opacity:0.9}
+
+        .services-summary{background:#fff;padding:3.5rem 0}
+        .services-summary h2{text-align:center;font-size:1.6rem;margin-bottom:3rem;color:var(--text);font-weight:600}
+        .summary-content{display:flex;flex-direction:column;gap:48px}
+        .summary-item{padding:48px;border-left:6px solid var(--accent-gold);background:#f9f7f4;border-radius:8px}
+        .summary-item h3{font-size:1.4rem;margin-bottom:16px;color:var(--text);font-weight:600}
+        .summary-item p{color:var(--muted);line-height:1.8;font-size:1rem}
 
         .featured-image{width:100%;max-width:800px;margin:0 auto;border-radius:10px;box-shadow:0 8px 26px rgba(26,58,82,0.08)}
         .about-image{height:240px;border-radius:10px;background:linear-gradient(135deg,#f5f1e8,#faf7f1);border:1px solid rgba(26,58,82,0.08)}
@@ -117,25 +126,70 @@
         <div class="container">
             <h2 class="section-title" data-en="How We Help" data-es="Cómo Ayudamos">How We Help</h2>
             <div class="services-grid">
-                <a class="service-card" href="services.html">
+                <div class="service-card">
                     <img src="images/CANVA TAX ICON 3.png" alt="Income & Business Taxes" class="service-icon">
                     <h3 data-en="Income & Business Taxes" data-es="Impuestos sobre la Renta y Negocios">Income & Business Taxes</h3>
                     <div class="subtitle" data-en="Maximize Refunds, Minimize Stress." data-es="Maximizar Reembolsos, Minimizar Estrés.">Maximize Refunds, Minimize Stress.</div>
                     <p data-en="Quick, accurate, and optimized tax preparation for individuals and businesses." data-es="Preparación de impuestos rápida, precisa y optimizada para personas y negocios.">Quick, accurate, and optimized tax preparation for individuals and businesses.</p>
-                </a>
-                <a class="service-card" href="services.html">
+                    <a href="#tax-summary" class="learn-more" data-en="Learn More" data-es="Más Información">Learn More</a>
+                </div>
+                <div class="service-card">
                     <img src="images/CANVA BOOKKEPING ICON 2.png" alt="Bookkeeping" class="service-icon">
                     <h3 data-en="Bookkeeping" data-es="Contabilidad">Bookkeeping</h3>
                     <div class="subtitle" data-en="Organized Records, Clear Decisions." data-es="Registros Organizados, Decisiones Claras.">Organized Records, Clear Decisions.</div>
                     <p data-en="Stay on top of your finances with precise bookkeeping and up-to-date financial statements." data-es="Mantenga el control de sus finanzas con contabilidad precisa y estados financieros actualizados.">Stay on top of your finances with precise bookkeeping and up-to-date financial statements.</p>
-                </a>
-                <a class="service-card" href="services.html">
+                    <a href="#bookkeeping-summary" class="learn-more" data-en="Learn More" data-es="Más Información">Learn More</a>
+                </div>
+                <div class="service-card">
                     <img src="images/CANVA PAYROLL ICON 1.png" alt="Payroll Management" class="service-icon">
                     <h3 data-en="Payroll Management" data-es="Gestión de Nómina">Payroll Management</h3>
                     <div class="subtitle" data-en="Pay Employees Right, Every Time." data-es="Pague a los Empleados Correctamente, Siempre.">Pay Employees Right, Every Time.</div>
                     <p data-en="Reliable payroll processing, tax filings, and recordkeeping so you can focus on your business." data-es="Procesamiento confiable de nómina, presentación de impuestos y mantenimiento de registros para que pueda concentrarse en su negocio.">Reliable payroll processing, tax filings, and recordkeeping so you can focus on your business.</p>
-                </a>
+                    <a href="#payroll-summary" class="learn-more" data-en="Learn More" data-es="Más Información">Learn More</a>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Stock Image Section 1 -->
+    <section style="background:#fff;padding:3.5rem 0;text-align:center">
+        <div class="container">
+            <img src="images/CANVA%20STOCK%202.png" alt="Financial Planning" class="featured-image" style="margin:0 auto;display:block">
+        </div>
+    </section>
+
+    <!-- Services Summary Section -->
+    <section class="services-summary">
+        <div class="container">
+            <h2 data-en="Service Details" data-es="Detalles de Servicios">Service Details</h2>
+            <div class="summary-content">
+                <div class="summary-item" id="tax-summary">
+                    <h3 data-en="Income & Business Taxes" data-es="Impuestos sobre la Renta y Negocios">Income & Business Taxes</h3>
+                    <p data-en="We provide comprehensive tax preparation services for individuals and businesses. Our expertise includes maximizing deductions, ensuring compliance with current tax laws, and optimizing your tax strategy to minimize your tax burden. Whether you're filing a simple 1040 or managing complex business taxes, we've got you covered." data-es="Proporcionamos servicios integrales de preparación de impuestos para personas y negocios. Nuestra experiencia incluye maximizar deducciones, garantizar el cumplimiento de las leyes fiscales actuales y optimizar su estrategia fiscal para minimizar su carga fiscal. Ya sea que esté presentando un 1040 simple o administrando impuestos comerciales complejos, lo tenemos cubierto.">We provide comprehensive tax preparation services for individuals and businesses. Our expertise includes maximizing deductions, ensuring compliance with current tax laws, and optimizing your tax strategy to minimize your tax burden. Whether you're filing a simple 1040 or managing complex business taxes, we've got you covered.</p>
+                </div>
+                <div class="summary-item" id="bookkeeping-summary">
+                    <h3 data-en="Bookkeeping" data-es="Contabilidad">Bookkeeping</h3>
+                    <p data-en="Accurate bookkeeping is the foundation of financial success. We maintain organized records of all your financial transactions, reconcile accounts, and prepare detailed financial statements. With our bookkeeping services, you'll always know where your business stands financially and can make informed decisions with confidence." data-es="La contabilidad precisa es la base del éxito financiero. Mantenemos registros organizados de todas sus transacciones financieras, reconciliamos cuentas y preparamos estados financieros detallados. Con nuestros servicios de contabilidad, siempre sabrá dónde se encuentra su negocio financieramente y podrá tomar decisiones informadas con confianza.">Accurate bookkeeping is the foundation of financial success. We maintain organized records of all your financial transactions, reconcile accounts, and prepare detailed financial statements. With our bookkeeping services, you'll always know where your business stands financially and can make informed decisions with confidence.</p>
+                </div>
+                <div class="summary-item" id="payroll-summary">
+                    <h3 data-en="Payroll Management" data-es="Gestión de Nómina">Payroll Management</h3>
+                    <p data-en="Managing payroll can be complex and time-consuming. We handle all aspects of payroll processing, including calculating wages, withholding taxes, filing payroll tax returns, and maintaining compliance with federal and state regulations. Let us manage your payroll so you can focus on growing your business." data-es="Administrar la nómina puede ser complejo y llevar mucho tiempo. Manejamos todos los aspectos del procesamiento de nómina, incluido el cálculo de salarios, la retención de impuestos, la presentación de declaraciones de impuestos sobre la nómina y el mantenimiento del cumplimiento de las regulaciones federales y estatales. Déjenos administrar su nómina para que pueda concentrarse en hacer crecer su negocio.">Managing payroll can be complex and time-consuming. We handle all aspects of payroll processing, including calculating wages, withholding taxes, filing payroll tax returns, and maintaining compliance with federal and state regulations. Let us manage your payroll so you can focus on growing your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stock Image Section 2 -->
+    <section style="background:#fff;padding:3.5rem 0;text-align:center">
+        <div class="container">
+            <img src="images/CANVA%20STOCK%203.png" alt="Business Growth" class="featured-image" style="margin:0 auto;display:block">
+        </div>
+    </section>
+
+    <!-- Stock Image Section 3 -->
+    <section style="background:#fff;padding:3.5rem 0;text-align:center">
+        <div class="container">
+            <img src="images/CANVA%20STOCK%204.png" alt="Professional Services" class="featured-image" style="margin:0 auto;display:block">
         </div>
     </section>
 

@@ -52,12 +52,13 @@
     </section>
 
     <section>
-      <form action="mailto:info@mefinances.com" method="post" enctype="text/plain">
+      <form id="contactForm">
         <input type="text" name="name" placeholder="Your name" data-en-placeholder="Your name" data-es-placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Your email" data-en-placeholder="Your email" data-es-placeholder="Tu correo electrónico" required>
         <input type="text" name="subject" placeholder="Subject" data-en-placeholder="Subject" data-es-placeholder="Asunto">
         <textarea name="message" placeholder="Your message" data-en-placeholder="Your message" data-es-placeholder="Tu mensaje" rows="6" required></textarea>
         <button type="submit" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
+        <div id="formMessage" style="margin-top:12px;padding:12px;border-radius:8px;display:none;text-align:center;font-weight:500"></div>
       </form>
     </section>
   </main>
@@ -119,6 +120,47 @@
     });
 
     initLanguage();
+
+    // Handle contact form submission
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    contactForm.addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const formData = new FormData();
+      formData.append('name', document.querySelector('input[name="name"]').value);
+      formData.append('email', document.querySelector('input[name="email"]').value);
+      formData.append('subject', document.querySelector('input[name="subject"]').value);
+      formData.append('message', document.querySelector('textarea[name="message"]').value);
+      formData.append('_captcha', 'false');
+
+      try {
+        const response = await fetch('https://formspree.io/f/xyzgqwpk', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          formMessage.style.display = 'block';
+          formMessage.style.background = '#d4f1d4';
+          formMessage.style.color = '#1a3a52';
+          formMessage.textContent = currentLang === 'es'
+            ? '¡Mensaje enviado exitosamente! Nos comunicaremos pronto.'
+            : 'Message sent successfully! We\'ll get back to you soon.';
+          contactForm.reset();
+        } else {
+          throw new Error('Failed to send message');
+        }
+      } catch (error) {
+        formMessage.style.display = 'block';
+        formMessage.style.background = '#f1d4d4';
+        formMessage.style.color = '#1a3a52';
+        formMessage.textContent = currentLang === 'es'
+          ? 'Error al enviar el mensaje. Por favor, intente de nuevo.'
+          : 'Error sending message. Please try again.';
+      }
+    });
   </script>
 </body>
 </html>

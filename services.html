@@ -8,24 +8,40 @@
     :root{--accent:#d4a574;--accent-gold:#d4a574;--page-bg:#e8dcc8;--brightness:0.96;--text:#1a3a52;--muted:#5a6b78}
     *{box-sizing:border-box;margin:0;padding:0}
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--text);line-height:1.6;background:var(--page-bg);filter:brightness(var(--brightness))}
-    .container{max-width:1100px;margin:0 auto;padding:28px}
+    .container{max-width:1200px;margin:0 auto;padding:40px 20px}
     header{background:#1a3a52;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.1);color:#fff;margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);width:100vw}
-    header > div{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
+    header > div{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto}
     .logo{height:100px;width:100px;object-fit:contain}
     nav{display:flex;justify-content:flex-end;align-items:center;gap:24px}
     nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
     nav a{text-decoration:none;color:#fff;font-weight:500}
     nav a:hover{color:#d4a574}
-    .hero{padding:56px 0 28px}
-    h1{font-size:1.6rem;margin-bottom:8px}
-    p.lead{color:var(--muted);max-width:800px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px}
-    .card{background:#ffffff;padding:16px 18px;border-radius:10px;border:1px solid rgba(26,58,82,0.05);box-shadow:0 8px 22px rgba(26,58,82,0.04);border-top:4px solid rgba(212,165,116,0.2)}
-    .card h3{margin-bottom:8px;font-size:1rem}
-    footer{padding:36px 0;border-top:4px solid #d4a574;background:#1a3a52;color:#fff;text-align:center;margin-left:-28px;margin-right:-28px;padding-left:28px;padding-right:28px}
+    .hero{padding:40px 0 60px;text-align:center}
+    h1{font-size:2.2rem;margin-bottom:12px;font-weight:700;color:var(--text)}
+    p.lead{color:var(--muted);max-width:700px;margin:0 auto;font-size:1.05rem}
+    .service-section{margin:60px 0;padding:50px 0;border-bottom:1px solid rgba(26,58,82,0.1)}
+    .service-section:last-child{border-bottom:none}
+    .service-content{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .service-content.reverse{grid-template-columns:1fr 1fr}
+    .service-content.reverse .service-text{order:2}
+    .service-content.reverse .service-image{order:1}
+    .service-image{width:100%;height:350px;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(26,58,82,0.1)}
+    .service-image img{width:100%;height:100%;object-fit:cover}
+    .service-text h2{font-size:1.8rem;margin-bottom:16px;color:var(--text);font-weight:700}
+    .service-text p{color:var(--muted);font-size:1rem;line-height:1.8;margin-bottom:16px}
+    .service-text p:last-child{margin-bottom:0}
+    footer{padding:40px 0;border-top:4px solid #d4a574;background:#1a3a52;color:#fff;text-align:center;margin-left:-20px;margin-right:-20px;padding-left:20px;padding-right:20px}
     .lang-toggle{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:0.4rem 0.8rem;border-radius:6px;cursor:pointer;font-size:0.85rem;font-weight:500;transition:background 0.2s}
     .lang-toggle:hover{background:rgba(255,255,255,0.2)}
     .lang-toggle.active{background:#d4a574}
+    @media(max-width:768px){
+      .service-content,.service-content.reverse{grid-template-columns:1fr}
+      .service-content.reverse .service-text{order:1}
+      .service-content.reverse .service-image{order:2}
+      h1{font-size:1.8rem}
+      .service-text h2{font-size:1.4rem}
+      .service-image{height:250px}
+    }
   </style>
 </head>
 <body>
@@ -51,22 +67,55 @@
       <p class="lead" data-en="Comprehensive tax, bookkeeping, and advisory services tailored for individuals and businesses. We focus on clarity, compliance, and growth." data-es="Servicios integrales de impuestos, contabilidad y asesoramiento personalizados para individuos y negocios. Nos enfocamos en claridad, cumplimiento y crecimiento.">Comprehensive tax, bookkeeping, and advisory services tailored for individuals and businesses. We focus on clarity, compliance, and growth.</p>
     </section>
 
-    <section class="grid" aria-label="services">
-      <div class="card">
-        <h3 data-en="Income & Business Taxes" data-es="Impuestos sobre la Renta y Negocios">Income & Business Taxes</h3>
-        <p data-en="Take the stress out of tax season! I handle both individual and business tax preparation, ensuring your returns are accurate, compliant, and optimized to save you money. From federal and state filings to business taxes for LLCs, corporations, and partnerships, I make sure you get the maximum benefit with minimal hassle." data-es="¡Elimine el estrés de la temporada de impuestos! Manejo la preparación de impuestos tanto individuales como empresariales, asegurando que sus declaraciones sean precisas, cumplan con las normas y estén optimizadas para ahorrarle dinero. Desde presentaciones fiscales federales y estatales hasta impuestos empresariales para LLCs, corporaciones y asociaciones, me aseguro de que obtenga el máximo beneficio con el mínimo inconveniente.">Take the stress out of tax season! I handle both individual and business tax preparation, ensuring your returns are accurate, compliant, and optimized to save you money. From federal and state filings to business taxes for LLCs, corporations, and partnerships, I make sure you get the maximum benefit with minimal hassle.</p>
+    <section class="service-section">
+      <div class="service-content">
+        <div class="service-image">
+          <img src="images/CANVA%20STOCK%201.png" alt="Income & Business Taxes">
+        </div>
+        <div class="service-text">
+          <h2 data-en="Income & Business Taxes" data-es="Impuestos sobre la Renta y Negocios">Income & Business Taxes</h2>
+          <p data-en="Take the stress out of tax season! I handle both individual and business tax preparation, ensuring your returns are accurate, compliant, and optimized to save you money." data-es="¡Elimine el estrés de la temporada de impuestos! Manejo la preparación de impuestos tanto individuales como empresariales, asegurando que sus declaraciones sean precisas, cumplan con las normas y estén optimizadas para ahorrarle dinero.">Take the stress out of tax season! I handle both individual and business tax preparation, ensuring your returns are accurate, compliant, and optimized to save you money.</p>
+          <p data-en="From federal and state filings to business taxes for LLCs, corporations, and partnerships, I make sure you get the maximum benefit with minimal hassle." data-es="Desde presentaciones fiscales federales y estatales hasta impuestos empresariales para LLCs, corporaciones y asociaciones, me aseguro de que obtenga el máximo beneficio con el mínimo inconveniente.">From federal and state filings to business taxes for LLCs, corporations, and partnerships, I make sure you get the maximum benefit with minimal hassle.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3 data-en="Bookkeeping" data-es="Contabilidad">Bookkeeping</h3>
-        <p data-en="Keep your finances organized and your business on track. I provide reliable bookkeeping services, including recording transactions, reconciling accounts, and generating clear financial statements. With up-to-date records, you'll always know where your business stands and be ready for tax season or business decisions." data-es="Mantenga sus finanzas organizadas y su negocio en camino. Proporciono servicios de contabilidad confiables, incluyendo registro de transacciones, reconciliación de cuentas y generación de estados financieros claros. Con registros actualizados, siempre sabrá dónde se encuentra su negocio y estará listo para la temporada de impuestos o decisiones empresariales.">Keep your finances organized and your business on track. I provide reliable bookkeeping services, including recording transactions, reconciling accounts, and generating clear financial statements. With up-to-date records, you'll always know where your business stands and be ready for tax season or business decisions.</p>
+    </section>
+
+    <section class="service-section">
+      <div class="service-content reverse">
+        <div class="service-image">
+          <img src="images/CANVA%20STOCK%202.png" alt="Bookkeeping">
+        </div>
+        <div class="service-text">
+          <h2 data-en="Bookkeeping" data-es="Contabilidad">Bookkeeping</h2>
+          <p data-en="Keep your finances organized and your business on track. I provide reliable bookkeeping services, including recording transactions, reconciling accounts, and generating clear financial statements." data-es="Mantenga sus finanzas organizadas y su negocio en camino. Proporciono servicios de contabilidad confiables, incluyendo registro de transacciones, reconciliación de cuentas y generación de estados financieros claros.">Keep your finances organized and your business on track. I provide reliable bookkeeping services, including recording transactions, reconciling accounts, and generating clear financial statements.</p>
+          <p data-en="With up-to-date records, you'll always know where your business stands and be ready for tax season or business decisions." data-es="Con registros actualizados, siempre sabrá dónde se encuentra su negocio y estará listo para la temporada de impuestos o decisiones empresariales.">With up-to-date records, you'll always know where your business stands and be ready for tax season or business decisions.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3 data-en="Payroll Management" data-es="Gestión de Nómina">Payroll Management</h3>
-        <p data-en="Pay your employees on time and stay compliant. I manage payroll processing, taxes, and recordkeeping, ensuring accuracy and compliance with federal and state regulations. Spend less time on administrative headaches and more time focusing on growing your business." data-es="Pague a sus empleados a tiempo y manténgase en cumplimiento. Manejo el procesamiento de nómina, impuestos y mantenimiento de registros, asegurando precisión y cumplimiento de las regulaciones federales y estatales. Dedique menos tiempo a dolores de cabeza administrativos y más tiempo a enfocar el crecimiento de su negocio.">Pay your employees on time and stay compliant. I manage payroll processing, taxes, and recordkeeping, ensuring accuracy and compliance with federal and state regulations. Spend less time on administrative headaches and more time focusing on growing your business.</p>
+    </section>
+
+    <section class="service-section">
+      <div class="service-content">
+        <div class="service-image">
+          <img src="images/CANVA%20STOCK%203.png" alt="Payroll Management">
+        </div>
+        <div class="service-text">
+          <h2 data-en="Payroll Management" data-es="Gestión de Nómina">Payroll Management</h2>
+          <p data-en="Pay your employees on time and stay compliant. I manage payroll processing, taxes, and recordkeeping, ensuring accuracy and compliance with federal and state regulations." data-es="Pague a sus empleados a tiempo y manténgase en cumplimiento. Manejo el procesamiento de nómina, impuestos y mantenimiento de registros, asegurando precisión y cumplimiento de las regulaciones federales y estatales.">Pay your employees on time and stay compliant. I manage payroll processing, taxes, and recordkeeping, ensuring accuracy and compliance with federal and state regulations.</p>
+          <p data-en="Spend less time on administrative headaches and more time focusing on growing your business." data-es="Dedique menos tiempo a dolores de cabeza administrativos y más tiempo a enfocar el crecimiento de su negocio.">Spend less time on administrative headaches and more time focusing on growing your business.</p>
+        </div>
       </div>
-      <div class="card">
-        <h3 data-en="Financial Planning/Budgeting" data-es="Planificación Financiera/Presupuestación">Financial Planning/Budgeting</h3>
-        <p data-en="Plan for success with strategic financial guidance. I work with you to create budgets, forecast cash flow, and develop financial strategies that align with your business goals. Whether you're starting out or scaling up, I help you make confident decisions with clear financial insights." data-es="Planifique el éxito con orientación financiera estratégica. Trabajo con usted para crear presupuestos, pronosticar flujo de efectivo y desarrollar estrategias financieras que se alineen con sus objetivos comerciales. Ya sea que esté comenzando o escalando, lo ayudo a tomar decisiones confiadas con información financiera clara.">Plan for success with strategic financial guidance. I work with you to create budgets, forecast cash flow, and develop financial strategies that align with your business goals. Whether you're starting out or scaling up, I help you make confident decisions with clear financial insights.</p>
+    </section>
+
+    <section class="service-section">
+      <div class="service-content reverse">
+        <div class="service-image">
+          <img src="images/CANVA%20STOCK%204.png" alt="Financial Planning/Budgeting">
+        </div>
+        <div class="service-text">
+          <h2 data-en="Financial Planning/Budgeting" data-es="Planificación Financiera/Presupuestación">Financial Planning/Budgeting</h2>
+          <p data-en="Plan for success with strategic financial guidance. I work with you to create budgets, forecast cash flow, and develop financial strategies that align with your business goals." data-es="Planifique el éxito con orientación financiera estratégica. Trabajo con usted para crear presupuestos, pronosticar flujo de efectivo y desarrollar estrategias financieras que se alineen con sus objetivos comerciales.">Plan for success with strategic financial guidance. I work with you to create budgets, forecast cash flow, and develop financial strategies that align with your business goals.</p>
+          <p data-en="Whether you're starting out or scaling up, I help you make confident decisions with clear financial insights." data-es="Ya sea que esté comenzando o escalando, lo ayudo a tomar decisiones confiadas con información financiera clara.">Whether you're starting out or scaling up, I help you make confident decisions with clear financial insights.</p>
+        </div>
       </div>
     </section>
   </main>
