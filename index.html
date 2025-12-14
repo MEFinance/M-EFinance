@@ -27,7 +27,7 @@
         header > div{display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin:0 auto}
 
         /* keep same header structure as other pages */
-        .logo{font-weight:600;font-size:1.4rem;color:#fff}
+        .logo{height:100px;width:100px;object-fit:contain}
 
         nav{display:flex;justify-content:flex-end;align-items:center;gap:24px}
         nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
@@ -48,12 +48,12 @@
         .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
         .service-card{background:#fff;padding:24px;border-radius:10px;border:1px solid rgba(26,58,82,0.05);box-shadow:0 8px 26px rgba(26,58,82,0.04);border-top:4px solid rgba(212,165,116,0.2);text-decoration:none;color:inherit;transition:transform 0.2s,box-shadow 0.2s}
         .service-card:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(26,58,82,0.08)}
-        .service-icon{font-size:2.4rem;margin-bottom:12px;display:block}
+        .service-icon{font-size:2.4rem;margin-bottom:12px;display:block;width:60px;height:60px;object-fit:contain}
         .service-card h3{font-size:1.1rem;margin-bottom:4px;font-weight:600}
         .service-card .subtitle{font-size:0.9rem;color:#d4a574;font-weight:500;margin-bottom:12px}
         .service-card p{color:var(--muted);font-size:0.95rem;line-height:1.5}
 
-        .about-content{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+        .featured-image{width:100%;max-width:800px;margin:0 auto;border-radius:10px;box-shadow:0 8px 26px rgba(26,58,82,0.08)}
         .about-image{height:240px;border-radius:10px;background:linear-gradient(135deg,#f5f1e8,#faf7f1);border:1px solid rgba(26,58,82,0.08)}
 
         .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
@@ -81,7 +81,7 @@
     <!-- Header/Navigation -->
     <header>
         <div>
-            <div class="logo">M & E Finances</div>
+            <img src="images/1.png" alt="M & E Finances" class="logo">
             <nav>
                 <ul>
                     <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
@@ -105,25 +105,32 @@
         </div>
     </section>
 
+    <!-- Featured Image Section -->
+    <section style="background:#fff;padding:3.5rem 0;text-align:center">
+        <div class="container">
+            <img src="images/CANVA%20STOCK%201.png" alt="Financial Services" class="featured-image" style="margin:0 auto;display:block">
+        </div>
+    </section>
+
     <!-- Highlights (short links to dedicated pages) -->
     <section class="services">
         <div class="container">
             <h2 class="section-title" data-en="How We Help" data-es="Cómo Ayudamos">How We Help</h2>
             <div class="services-grid">
                 <a class="service-card" href="services.html">
-                    <span class="service-icon">📊</span>
+                    <img src="images/CANVA TAX ICON 3.png" alt="Income & Business Taxes" class="service-icon">
                     <h3 data-en="Income & Business Taxes" data-es="Impuestos sobre la Renta y Negocios">Income & Business Taxes</h3>
                     <div class="subtitle" data-en="Maximize Refunds, Minimize Stress." data-es="Maximizar Reembolsos, Minimizar Estrés.">Maximize Refunds, Minimize Stress.</div>
                     <p data-en="Quick, accurate, and optimized tax preparation for individuals and businesses." data-es="Preparación de impuestos rápida, precisa y optimizada para personas y negocios.">Quick, accurate, and optimized tax preparation for individuals and businesses.</p>
                 </a>
                 <a class="service-card" href="services.html">
-                    <span class="service-icon">📋</span>
+                    <img src="images/CANVA BOOKKEPING ICON 2.png" alt="Bookkeeping" class="service-icon">
                     <h3 data-en="Bookkeeping" data-es="Contabilidad">Bookkeeping</h3>
                     <div class="subtitle" data-en="Organized Records, Clear Decisions." data-es="Registros Organizados, Decisiones Claras.">Organized Records, Clear Decisions.</div>
                     <p data-en="Stay on top of your finances with precise bookkeeping and up-to-date financial statements." data-es="Mantenga el control de sus finanzas con contabilidad precisa y estados financieros actualizados.">Stay on top of your finances with precise bookkeeping and up-to-date financial statements.</p>
                 </a>
                 <a class="service-card" href="services.html">
-                    <span class="service-icon">💰</span>
+                    <img src="images/CANVA PAYROLL ICON 1.png" alt="Payroll Management" class="service-icon">
                     <h3 data-en="Payroll Management" data-es="Gestión de Nómina">Payroll Management</h3>
                     <div class="subtitle" data-en="Pay Employees Right, Every Time." data-es="Pague a los Empleados Correctamente, Siempre.">Pay Employees Right, Every Time.</div>
                     <p data-en="Reliable payroll processing, tax filings, and recordkeeping so you can focus on your business." data-es="Procesamiento confiable de nómina, presentación de impuestos y mantenimiento de registros para que pueda concentrarse en su negocio.">Reliable payroll processing, tax filings, and recordkeeping so you can focus on your business.</p>
