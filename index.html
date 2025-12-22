@@ -62,6 +62,20 @@
         .summary-item h3{font-size:1.4rem;margin-bottom:16px;color:var(--text);font-weight:600}
         .summary-item p{color:var(--muted);line-height:1.8;font-size:1rem}
 
+        .service-toggle{display:flex;justify-content:center;gap:16px;margin-bottom:2rem;flex-wrap:wrap}
+        .toggle-btn{padding:12px 24px;background:var(--accent-gold);color:#fff;border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:opacity 0.2s,transform 0.2s;font-size:1rem}
+        .toggle-btn:hover{opacity:0.9;transform:translateY(-2px)}
+        .toggle-btn.active{background:#1a3a52;box-shadow:0 6px 18px rgba(212,165,116,0.2)}
+
+        .resources-section{background:#f9f7f4;padding:3.5rem 0;margin-top:3.5rem}
+        .resources-section h2{text-align:center;font-size:1.6rem;margin-bottom:2rem;color:var(--text);font-weight:600}
+        .resources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+        .resource-card{background:#fff;padding:24px;border-radius:10px;border:1px solid rgba(26,58,82,0.05);box-shadow:0 8px 26px rgba(26,58,82,0.04)}
+        .resource-card h3{font-size:1.1rem;margin-bottom:12px;color:var(--text);font-weight:600}
+        .resource-card p{color:var(--muted);font-size:0.95rem;margin-bottom:16px;line-height:1.5}
+        .resource-card a{display:inline-block;padding:10px 16px;background:var(--accent-gold);color:#fff;text-decoration:none;border-radius:6px;font-weight:600;font-size:0.9rem;transition:opacity 0.2s}
+        .resource-card a:hover{opacity:0.9}
+
         .featured-image{width:100%;max-width:800px;margin:0 auto;border-radius:10px;box-shadow:0 8px 26px rgba(26,58,82,0.08)}
         .about-image{height:240px;border-radius:10px;background:linear-gradient(135deg,#f5f1e8,#faf7f1);border:1px solid rgba(26,58,82,0.08)}
 
@@ -162,6 +176,11 @@
     <section class="services-summary">
         <div class="container">
             <h2 data-en="Service Details" data-es="Detalles de Servicios">Service Details</h2>
+            <div class="service-toggle">
+                <button class="toggle-btn active" data-service="tax-summary" data-en="Income & Business Taxes" data-es="Impuestos sobre la Renta y Negocios">Income & Business Taxes</button>
+                <button class="toggle-btn" data-service="bookkeeping-summary" data-en="Bookkeeping" data-es="Contabilidad">Bookkeeping</button>
+                <button class="toggle-btn" data-service="payroll-summary" data-en="Payroll Management" data-es="Gestión de Nómina">Payroll Management</button>
+            </div>
             <div class="summary-content">
                 <div class="summary-item" id="tax-summary">
                     <h3 data-en="Income & Business Taxes" data-es="Impuestos sobre la Renta y Negocios">Income & Business Taxes</h3>
@@ -193,11 +212,50 @@
         </div>
     </section>
 
+    <!-- Resources Section -->
+    <section class="resources-section">
+        <div class="container">
+            <h2 data-en="Tips & Resources" data-es="Consejos y Recursos">Tips & Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3 data-en="IRS Official Website" data-es="Sitio Web Oficial del IRS">IRS Official Website</h3>
+                    <p data-en="Access official tax forms, publications, and guidance from the Internal Revenue Service." data-es="Acceda a formularios fiscales oficiales, publicaciones y orientación del Servicio de Impuestos Internos.">Access official tax forms, publications, and guidance from the Internal Revenue Service.</p>
+                    <a href="https://www.irs.gov" target="_blank" rel="noopener noreferrer" data-en="Visit IRS.gov" data-es="Visitar IRS.gov">Visit IRS.gov</a>
+                </div>
+                <div class="resource-card">
+                    <h3 data-en="IRS Tax Professionals" data-es="Profesionales Fiscales del IRS">IRS Tax Professionals</h3>
+                    <p data-en="Find information about tax professional credentials and continuing education requirements." data-es="Encuentre información sobre credenciales de profesionales fiscales y requisitos de educación continua.">Find information about tax professional credentials and continuing education requirements.</p>
+                    <a href="https://www.irs.gov/tax-professionals" target="_blank" rel="noopener noreferrer" data-en="Learn More" data-es="Más Información">Learn More</a>
+                </div>
+                <div class="resource-card">
+                    <h3 data-en="Small Business Resources" data-es="Recursos para Pequeños Negocios">Small Business Resources</h3>
+                    <p data-en="Official SBA resources for small business owners including tax information and compliance guides." data-es="Recursos oficiales de la SBA para propietarios de pequeños negocios, incluida información fiscal y guías de cumplimiento.">Official SBA resources for small business owners including tax information and compliance guides.</p>
+                    <a href="https://www.sba.gov" target="_blank" rel="noopener noreferrer" data-en="Visit SBA.gov" data-es="Visitar SBA.gov">Visit SBA.gov</a>
+                </div>
+                <div class="resource-card">
+                    <h3 data-en="Payroll Tax Information" data-es="Información de Impuestos sobre Nómina">Payroll Tax Information</h3>
+                    <p data-en="Learn about payroll tax requirements, withholding, and filing deadlines from the IRS." data-es="Obtenga información sobre requisitos de impuestos sobre nómina, retención y plazos de presentación del IRS.">Learn about payroll tax requirements, withholding, and filing deadlines from the IRS.</p>
+                    <a href="https://www.irs.gov/businesses/small-businesses-self-employed/employment-taxes" target="_blank" rel="noopener noreferrer" data-en="Learn More" data-es="Más Información">Learn More</a>
+                </div>
+                <div class="resource-card">
+                    <h3 data-en="Business Deductions Guide" data-es="Guía de Deducciones Comerciales">Business Deductions Guide</h3>
+                    <p data-en="Comprehensive guide to common business deductions and how to properly document them." data-es="Guía completa de deducciones comerciales comunes y cómo documentarlas adecuadamente.">Comprehensive guide to common business deductions and how to properly document them.</p>
+                    <a href="https://www.irs.gov/businesses/small-businesses-self-employed/deducting-business-expenses" target="_blank" rel="noopener noreferrer" data-en="Learn More" data-es="Más Información">Learn More</a>
+                </div>
+                <div class="resource-card">
+                    <h3 data-en="Tax Calendar" data-es="Calendario Fiscal">Tax Calendar</h3>
+                    <p data-en="Stay on top of important tax deadlines and filing dates throughout the year." data-es="Manténgase al tanto de los plazos fiscales importantes y las fechas de presentación durante todo el año.">Stay on top of important tax deadlines and filing dates throughout the year.</p>
+                    <a href="https://www.irs.gov/businesses/small-businesses-self-employed/tax-calendar" target="_blank" rel="noopener noreferrer" data-en="View Calendar" data-es="Ver Calendario">View Calendar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; 2025 M & E Finances. All rights reserved. | <span data-en="Se Habla Español" data-es="Se Habla Español">Se Habla Español</span></p>
-            <p>Phone: (555) 123-4567 | Email: info@mefinances.com</p>
+            <p>Phone: 346-735-4799 | Email: m.e.acctservices@gmail.com</p>
         </div>
     </footer>
 
@@ -223,7 +281,7 @@
                 titleEl.textContent = newTitle;
                 document.title = newTitle;
             }
-            
+
             const elements = document.querySelectorAll('[data-en][data-es]');
             elements.forEach(el => {
                 if (lang === 'es') {
@@ -233,6 +291,34 @@
                 }
             });
         }
+
+        // Service Toggle Functionality
+        const toggleBtns = document.querySelectorAll('.toggle-btn');
+        const summaryItems = document.querySelectorAll('.summary-item');
+
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const serviceId = this.getAttribute('data-service');
+
+                // Remove active class from all buttons
+                toggleBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                this.classList.add('active');
+
+                // Hide all summary items
+                summaryItems.forEach(item => {
+                    item.style.display = 'none';
+                });
+
+                // Show selected summary item
+                const selectedItem = document.getElementById(serviceId);
+                if (selectedItem) {
+                    selectedItem.style.display = 'block';
+                    // Scroll to the item
+                    selectedItem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
 
         // Toggle language
         langToggle.addEventListener('click', function() {
