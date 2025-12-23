@@ -56,7 +56,7 @@
           <li><a href="testimonials.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
           <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
         </ul>
-        <button class="lang-toggle" id="langToggle">ES</button>
+        <button class="lang-toggle" id="langToggle">En Español</button>
       </nav>
     </div>
   </header>
@@ -70,7 +70,7 @@
     <section class="service-section">
       <div class="service-content">
         <div class="service-image">
-          <img src="images/CANVA%20STOCK%201.png" alt="Income & Business Taxes">
+          <img src="image_2/21.png" alt="Income & Business Taxes">
         </div>
         <div class="service-text">
           <h2 data-en="Income & Business Taxes" data-es="Impuestos sobre la Renta y Negocios">Income & Business Taxes</h2>
@@ -96,7 +96,7 @@
     <section class="service-section">
       <div class="service-content">
         <div class="service-image">
-          <img src="images/CANVA%20STOCK%203.png" alt="Payroll Management">
+          <img src="image_2/29.png" alt="Payroll Management">
         </div>
         <div class="service-text">
           <h2 data-en="Payroll Management" data-es="Gestión de Nómina">Payroll Management</h2>
@@ -109,7 +109,7 @@
     <section class="service-section">
       <div class="service-content reverse">
         <div class="service-image">
-          <img src="images/CANVA%20STOCK%204.png" alt="Financial Planning/Budgeting">
+          <img src="images/CANVA%20STOCK%203.png" alt="Financial Planning/Budgeting">
         </div>
         <div class="service-text">
           <h2 data-en="Financial Planning/Budgeting" data-es="Planificación Financiera/Presupuestación">Financial Planning/Budgeting</h2>
@@ -134,7 +134,7 @@
     function initLanguage() {
       if (currentLang === 'es') {
         langToggle.classList.add('active');
-        langToggle.textContent = 'EN';
+        langToggle.textContent = 'In English';
         translatePage('es');
       }
     }
@@ -162,7 +162,7 @@
       currentLang = currentLang === 'en' ? 'es' : 'en';
       localStorage.setItem('language', currentLang);
       langToggle.classList.toggle('active');
-      langToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+      langToggle.textContent = currentLang === 'es' ? 'In English' : 'En Español';
       translatePage(currentLang);
     });
 

@@ -39,7 +39,7 @@
           <li><a href="testimonials.html" data-en="Testimonials" data-es="Testimonios">Testimonials</a></li>
           <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
         </ul>
-        <button class="lang-toggle" id="langToggle">ES</button>
+        <button class="lang-toggle" id="langToggle">En Español</button>
       </nav>
     </div>
   </header>
@@ -82,7 +82,7 @@
     function initLanguage() {
       if (currentLang === 'es') {
         langToggle.classList.add('active');
-        langToggle.textContent = 'EN';
+        langToggle.textContent = 'In English';
         translatePage('es');
       }
     }
@@ -110,7 +110,7 @@
       currentLang = currentLang === 'en' ? 'es' : 'en';
       localStorage.setItem('language', currentLang);
       langToggle.classList.toggle('active');
-      langToggle.textContent = currentLang === 'es' ? 'EN' : 'ES';
+      langToggle.textContent = currentLang === 'es' ? 'In English' : 'En Español';
       translatePage(currentLang);
     });
 
