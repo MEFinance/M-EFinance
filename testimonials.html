@@ -12,6 +12,7 @@
     header{background:#1a3a52;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.1);color:#fff;margin-left:calc(-50vw + 50%);margin-right:calc(-50vw + 50%);width:100vw}
     header > div{display:flex;justify-content:space-between;align-items:center;max-width:980px;margin:0 auto}
     .logo{height:100px;width:100px;object-fit:contain}
+    .logo-text{color:#fff;font-size:1.4rem;font-weight:600;margin-left:12px}
     nav{display:flex;justify-content:flex-end;align-items:center;gap:24px}
     nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
     nav a{text-decoration:none;color:#fff;font-weight:500}
@@ -30,7 +31,10 @@
 <body>
   <header>
     <div>
-      <img src="images/1.png" alt="M & E Finances" class="logo">
+      <div class="logo-container" style="display:flex;align-items:center">
+        <img src="images/1.png" alt="M & E Finances" class="logo">
+        <span class="logo-text">M&E SERVICES</span>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
@@ -52,18 +56,23 @@
 
     <section class="grid">
       <div class="card">
-        <p class="quote" data-en="&quot;M & E saved me thousands in taxes. Their expertise and attention to detail are unmatched!&quot;" data-es="&quot;M & E me ahorró miles en impuestos. ¡Su experiencia y atención al detalle son inigualables!&quot;">&quot;M & E saved me thousands in taxes. Their expertise and attention to detail are unmatched!&quot;</p>
-        <p style="font-weight:600" data-en="— Sarah Johnson, Business Owner" data-es="— Sarah Johnson, Propietaria de Negocios">— Sarah Johnson, Business Owner</p>
+        <p class="quote" data-en="&quot;I had my taxes done last year by Marvyn, and I honestly couldn't have asked for a better experience. The service was excellent from start to finish. He was professional, patient, and incredibly thorough. What really gave me peace of mind was how knowledgeable he was; every question I had, he explained clearly and confidently. On top of that, his fee was surprisingly low compared to what I've paid elsewhere, yet the quality of the work was far better. Overall, it was a smooth, stress-free experience, and I'll definitely be coming back every year.&quot;" data-es="&quot;El año pasado hice mis impuestos con Marvyn, y honestamente no podría haber pedido una mejor experiencia. El servicio fue excelente de principio a fin. Fue profesional, paciente e increíblemente exhaustivo. Lo que realmente me dio tranquilidad fue lo conocedor que era; cada pregunta que tenía, la explicaba clara y confiadamente. Además, su tarifa fue sorprendentemente baja en comparación con lo que he pagado en otros lugares, pero la calidad del trabajo fue mucho mejor. En general, fue una experiencia suave y sin estrés, y definitivamente volveré cada año.&quot;">&quot;I had my taxes done last year by Marvyn, and I honestly couldn't have asked for a better experience. The service was excellent from start to finish. He was professional, patient, and incredibly thorough. What really gave me peace of mind was how knowledgeable he was; every question I had, he explained clearly and confidently. On top of that, his fee was surprisingly low compared to what I've paid elsewhere, yet the quality of the work was far better. Overall, it was a smooth, stress-free experience, and I'll definitely be coming back every year.&quot;</p>
+        <p style="font-weight:600" data-en="— Erick Lopez, Client Account Specialist" data-es="— Erick Lopez, Especialista en Cuentas de Clientes">— Erick Lopez, Client Account Specialist</p>
       </div>
 
       <div class="card">
-        <p class="quote" data-en="&quot;Finally, a tax firm that actually explains things in plain English. Highly recommended!&quot;" data-es="&quot;Finalmente, una firma de impuestos que realmente explica las cosas en inglés simple. ¡Altamente recomendado!&quot;">&quot;Finally, a tax firm that actually explains things in plain English. Highly recommended!&quot;</p>
-        <p style="font-weight:600" data-en="— Michael Chen, Freelancer" data-es="— Michael Chen, Trabajador Autónomo">— Michael Chen, Freelancer</p>
+        <p class="quote" data-en="&quot;Professional, efficient, and trustworthy. A pleasure to work with someone who is friendly and one who truly cares about their clients. I highly recommend them to anyone looking for reliable tax help.&quot;" data-es="&quot;Profesional, eficiente y confiable. Un placer trabajar con alguien que es amable y que realmente se preocupa por sus clientes. Los recomiendo altamente a cualquiera que busque ayuda fiscal confiable.&quot;">&quot;Professional, efficient, and trustworthy. A pleasure to work with someone who is friendly and one who truly cares about their clients. I highly recommend them to anyone looking for reliable tax help.&quot;</p>
+        <p style="font-weight:600" data-en="— Jaziel Solano, Credit Risk Management Specialist" data-es="— Jaziel Solano, Especialista en Gestión de Riesgo de Crédito">— Jaziel Solano, Credit Risk Management Specialist</p>
       </div>
 
       <div class="card">
-        <p class="quote" data-en="&quot;Professional, reliable, and always looking out for my best interests. Thank you!&quot;" data-es="&quot;Profesional, confiable y siempre velando por mis mejores intereses. ¡Gracias!&quot;">&quot;Professional, reliable, and always looking out for my best interests. Thank you!&quot;</p>
-        <p style="font-weight:600" data-en="— Jennifer Martinez, Real Estate Investor" data-es="— Jennifer Martinez, Inversionista de Bienes Raíces">— Jennifer Martinez, Real Estate Investor</p>
+        <p class="quote" data-en="&quot;Marvyn demonstrated a high level of professionalism, efficiency, and reliability. He was thorough in his explanations and never rushed the process, consistently acting in my best interests. I would strongly recommend M&E Financial Services!&quot;" data-es="&quot;Marvyn demostró un alto nivel de profesionalismo, eficiencia y confiabilidad. Fue exhaustivo en sus explicaciones y nunca apresuró el proceso, actuando consistentemente en mis mejores intereses. ¡Recomendaría fuertemente M&E Servicios Financieros!&quot;">&quot;Marvyn demonstrated a high level of professionalism, efficiency, and reliability. He was thorough in his explanations and never rushed the process, consistently acting in my best interests. I would strongly recommend M&E Financial Services!&quot;</p>
+        <p style="font-weight:600" data-en="— Lesly Sandoval, Mental Health Professional" data-es="— Lesly Sandoval, Profesional de Salud Mental">— Lesly Sandoval, Mental Health Professional</p>
+      </div>
+
+      <div class="card">
+        <p class="quote" data-en="&quot;Service was great! Was very knowledgeable and able to answer all the questions I had. Was able to work with my schedule and be available at a time that worked best for me. Process was fast and easy. Would recommend to friends and family members.&quot;" data-es="&quot;¡El servicio fue excelente! Fue muy conocedor y pudo responder todas las preguntas que tenía. Pude trabajar con mi horario y estar disponible en un momento que me funcionara mejor. El proceso fue rápido y fácil. Recomendaría a amigos y familiares.&quot;">&quot;Service was great! Was very knowledgeable and able to answer all the questions I had. Was able to work with my schedule and be available at a time that worked best for me. Process was fast and easy. Would recommend to friends and family members.&quot;</p>
+        <p style="font-weight:600" data-en="— German Guzmán, Dispatcher" data-es="— German Guzmán, Despachador">— German Guzmán, Dispatcher</p>
       </div>
     </section>
   </main>
