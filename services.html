@@ -36,13 +36,46 @@
     .lang-toggle{background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3);padding:0.4rem 0.8rem;border-radius:6px;cursor:pointer;font-size:0.85rem;font-weight:500;transition:background 0.2s}
     .lang-toggle:hover{background:rgba(255,255,255,0.2)}
     .lang-toggle.active{background:#d4a574}
+
+    /* Hamburger Menu */
+    .hamburger{display:none;flex-direction:column;cursor:pointer;padding:10px;gap:5px;background:none;border:none}
+    .hamburger span{width:25px;height:3px;background:#fff;border-radius:3px;transition:all 0.3s ease}
+    .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(6px,6px)}
+    .hamburger.active span:nth-child(2){opacity:0}
+    .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(6px,-6px)}
+
     @media(max-width:768px){
-      .service-content,.service-content.reverse{grid-template-columns:1fr}
+      .container{padding:20px 16px}
+      header{padding:12px 16px}
+      header > div{position:relative}
+      .logo{height:60px;width:60px}
+      .logo-text{font-size:1rem;margin-left:8px}
+      .hamburger{display:flex}
+      nav{position:absolute;top:100%;right:0;left:0;background:#1a3a52;flex-direction:column;padding:0;gap:0;max-height:0;overflow:hidden;transition:max-height 0.3s ease;z-index:1000}
+      nav.active{max-height:400px;padding:16px 0;border-top:1px solid rgba(255,255,255,0.1)}
+      nav ul{flex-direction:column;gap:0;width:100%;text-align:center}
+      nav ul li{padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+      nav a{padding:8px 16px;display:block}
+      .lang-toggle{margin:16px auto 0;width:90%}
+      .hero{padding:24px 0 30px}
+      h1{font-size:1.5rem}
+      p.lead{font-size:0.95rem;padding:0 10px}
+      .service-section{margin:30px 0;padding:30px 0}
+      .service-content,.service-content.reverse{grid-template-columns:1fr;gap:24px}
       .service-content.reverse .service-text{order:1}
       .service-content.reverse .service-image{order:2}
-      h1{font-size:1.8rem}
-      .service-text h2{font-size:1.4rem}
-      .service-image{height:250px}
+      .service-text h2{font-size:1.3rem}
+      .service-text p{font-size:0.95rem}
+      .service-image{height:220px}
+      footer{padding:24px 16px}
+      footer .container{padding:0 16px}
+    }
+    @media(max-width:480px){
+      .logo{height:50px;width:50px}
+      .logo-text{font-size:0.85rem}
+      h1{font-size:1.3rem}
+      .service-text h2{font-size:1.2rem}
+      .service-image{height:180px}
     }
   </style>
 </head>
@@ -53,7 +86,10 @@
         <img src="images/1.png" alt="M & E Finances" class="logo">
         <span class="logo-text">M&E SERVICES</span>
       </div>
-      <nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="navMenu">
         <ul>
           <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
           <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
@@ -134,6 +170,30 @@
   </footer>
 
   <script>
+    // Device Detection
+    const deviceInfo = {
+      isMobile: /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+      isTablet: /iPad|Android(?!.*Mobile)/i.test(navigator.userAgent),
+      isDesktop: !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
+      screenWidth: window.innerWidth,
+      isTouchDevice: 'ontouchstart' in window || navigator.maxTouchPoints > 0
+    };
+    document.body.setAttribute('data-device', deviceInfo.isMobile ? 'mobile' : deviceInfo.isTablet ? 'tablet' : 'desktop');
+
+    // Hamburger Menu Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
     const langToggle = document.getElementById('langToggle');
     let currentLang = localStorage.getItem('language') || 'en';
 
@@ -146,14 +206,12 @@
     }
 
     function translatePage(lang) {
-      // Translate page title
       const titleEl = document.querySelector('title[data-en][data-es]');
       if (titleEl) {
         const newTitle = lang === 'es' ? titleEl.getAttribute('data-es') : titleEl.getAttribute('data-en');
         titleEl.textContent = newTitle;
         document.title = newTitle;
       }
-      
       const elements = document.querySelectorAll('[data-en][data-es]');
       elements.forEach(el => {
         if (lang === 'es') {
