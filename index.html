@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title data-en="Stress-Free Financial Services - M & E Finances" data-es="Servicios Financieros Sin Estrés - M & E Finanzas">Stress-Free Financial Services - M & E Finances</title>
     <style>
         :root{
@@ -50,7 +51,7 @@
         .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
         .service-card{background:#fff;padding:24px;border-radius:10px;border:1px solid rgba(26,58,82,0.05);box-shadow:0 8px 26px rgba(26,58,82,0.04);border-top:4px solid rgba(212,165,116,0.2);text-decoration:none;color:inherit;transition:transform 0.2s,box-shadow 0.2s}
         .service-card:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(26,58,82,0.08)}
-        .service-icon{font-size:2.4rem;margin-bottom:12px;display:block;width:60px;height:60px;object-fit:contain}
+        .service-icon{font-size:2.4rem;margin-bottom:12px;display:block;width:80px;height:80px;object-fit:contain}
         .service-card h3{font-size:1.1rem;margin-bottom:4px;font-weight:600}
         .service-card .subtitle{font-size:0.9rem;color:#d4a574;font-weight:500;margin-bottom:12px}
         .service-card p{color:var(--muted);font-size:0.95rem;line-height:1.5}
@@ -138,7 +139,7 @@
             .hero h1{font-size:1.2rem}
             .hero p{font-size:0.9rem}
             section{padding:2rem 0}
-            .service-icon{width:50px;height:50px}
+            .service-icon{width:65px;height:65px}
             .service-card h3{font-size:1rem}
         }
     </style>
@@ -147,10 +148,10 @@
     <!-- Header/Navigation -->
     <header>
         <div>
-            <div class="logo-container" style="display:flex;align-items:center">
+            <a href="index.html" class="logo-container" style="display:flex;align-items:center;text-decoration:none;">
                 <img src="images/1.png" alt="M & E Finances" class="logo">
                 <span class="logo-text">M&E SERVICES</span>
-            </div>
+            </a>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -206,13 +207,6 @@
                     <a href="#payroll-summary" class="learn-more" data-en="Learn More" data-es="Más Información">Learn More</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Stock Image Section 1 -->
-    <section style="background:#fff;padding:3.5rem 0;text-align:center">
-        <div class="container">
-            <img src="images/CANVA%20STOCK%202.png" alt="Financial Planning" class="featured-image" style="margin:0 auto;display:block">
         </div>
     </section>
 

@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="format-detection" content="telephone=no">
   <title data-en="Resources — M & E Finances" data-es="Recursos — M & E Finanzas">Resources — M & E Finances</title>
   <style>
     :root{--accent:#d4a574;--accent-gold:#d4a574;--page-bg:#e8dcc8;--brightness:0.96;--text:#1a3a52;--muted:#5a6b78}
@@ -72,10 +73,10 @@
 <body>
   <header>
     <div>
-      <div class="logo-container" style="display:flex;align-items:center">
+      <a href="index.html" class="logo-container" style="display:flex;align-items:center;text-decoration:none;">
         <img src="images/1.png" alt="M & E Finances" class="logo">
         <span class="logo-text">M&E SERVICES</span>
-      </div>
+      </a>
       <button class="hamburger" id="hamburger" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -99,7 +100,7 @@
       <p class="lead" data-en="Comprehensive IRS resources to help you understand tax deductions, credits, and business expenses." data-es="Recursos completos del IRS para ayudarlo a comprender deducciones fiscales, créditos y gastos comerciales.">Comprehensive IRS resources to help you understand tax deductions, credits, and business expenses.</p>
     </section>
 
-    <section>
+    <section id="resources-en">
       <div class="resource-item">
         <h3>Difference Between a Tax Credit and a Tax Deduction</h3>
         <div class="resource-link">
@@ -210,6 +211,118 @@
         </div>
       </div>
     </section>
+
+    <section id="resources-es" style="display:none;">
+      <div class="resource-item">
+        <h3>Diferencia Entre un Crédito Tributario y una Deducción de Impuestos</h3>
+        <div class="resource-link">
+          <strong>• Créditos y Deducciones Tributarias (Consejo del IRS)</strong> – explica cómo los créditos reducen el impuesto adeudado vs las deducciones reducen el ingreso tributable
+          <br><a href="https://www.irs.gov/es/newsroom/tax-credits-and-deductions-for-individuals" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/newsroom/tax-credits-and-deductions-for-individuals</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+      </div>
+
+      <div class="resource-item">
+        <h3>Deducciones Comunes que los Nuevos Dueños de Negocios Olvidan</h3>
+        <div class="resource-link">
+          <strong>• Guía Tributaria para Pequeños Negocios (Pub. 334)</strong>
+          <br><a href="https://www.irs.gov/es/publications/p334" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/publications/p334</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+        <div class="resource-link">
+          <strong>• Guía de Recursos de Gastos Comerciales</strong> – lista deducciones comunes
+          <br><a href="https://www.irs.gov/es/forms-pubs/guide-to-business-expense-resources" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/forms-pubs/guide-to-business-expense-resources</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+      </div>
+
+      <div class="resource-item">
+        <h3>Qué Cuenta Como una Deducción Legítima de Comidas de Negocios</h3>
+        <div class="resource-link">
+          <strong>• Publicación 463 – Gastos de Viaje, Regalos y Automóvil</strong> – cubre las reglas de comidas de negocios
+          <br><a href="https://www.irs.gov/es/publications/p463" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/publications/p463</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+        <div class="resource-link">
+          <strong>• Instrucciones 2024 para el Anexo C</strong> – criterios de comidas de negocios
+          <br><a href="https://www.irs.gov/es/instructions/i1040sc" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/instructions/i1040sc</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+      </div>
+
+      <div class="resource-item">
+        <h3>Deducción por Oficina en el Hogar: Método Simplificado vs. Regular</h3>
+        <div class="resource-link">
+          <strong>• Deducción por Oficina en el Hogar – Resumen del IRS</strong>
+          <br><a href="https://www.irs.gov/es/newsroom/home-office-deduction-benefits-eligible-small-business-owners" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/newsroom/home-office-deduction-benefits-eligible-small-business-owners</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+        <div class="resource-link">
+          <strong>• Opción Simplificada para la Deducción por Oficina en el Hogar</strong>
+          <br><a href="https://www.irs.gov/es/businesses/small-businesses-self-employed/simplified-option-for-home-office-deduction" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/businesses/small-businesses-self-employed/simplified-option-for-home-office-deduction</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+      </div>
+
+      <div class="resource-item">
+        <h3>Millaje vs. Gastos Reales para Deducciones de Vehículos</h3>
+        <div class="resource-link">
+          <strong>• Publicación 463 – Gastos de Viaje, Regalos y Automóvil</strong> – explica el método de millaje vs el método de costo real
+          <br><a href="https://www.irs.gov/es/publications/p463" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/publications/p463</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+      </div>
+
+      <div class="resource-item">
+        <h3>Qué Hace que Algo sea un "Gasto de Negocio"</h3>
+        <div class="resource-link">
+          <strong>• Guía de Recursos de Gastos Comerciales</strong> – incluye gastos comerciales deducibles comunes
+          <br><a href="https://www.irs.gov/es/forms-pubs/guide-to-business-expense-resources" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/forms-pubs/guide-to-business-expense-resources</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+        <div class="resource-link">
+          <strong>• Guía Tributaria para Pequeños Negocios (Pub. 334)</strong> – explica ingresos comerciales y gastos permitidos
+          <br><a href="https://www.irs.gov/es/publications/p334" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/publications/p334</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+      </div>
+
+      <div class="resource-item">
+        <h3>¿Puede Deducir Ropa para el Trabajo?</h3>
+        <div class="resource-link">
+          <strong>• Guía de Recursos de Gastos Comerciales</strong> – en la mayoría de los casos, la ropa solo es deducible si es requerida, no apta para uso diario y usada en el comercio o negocio
+          <br><a href="https://www.irs.gov/es/forms-pubs/guide-to-business-expense-resources" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/forms-pubs/guide-to-business-expense-resources</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+      </div>
+
+      <div class="resource-item">
+        <h3>Qué Registros Debe Mantener para Prueba del IRS</h3>
+        <div class="resource-link">
+          <strong>• Mantenimiento de Registros – Página del IRS para Pequeños Negocios</strong> – qué guardar, tipos de registros
+          <br><a href="https://www.irs.gov/es/businesses/small-businesses-self-employed/recordkeeping" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/businesses/small-businesses-self-employed/recordkeeping</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+      </div>
+
+      <div class="resource-item">
+        <h3>Cuánto Tiempo Conservar sus Documentos Tributarios</h3>
+        <div class="resource-link">
+          <strong>• Mantenimiento de Registros – Cuánto Tiempo Conservar Registros</strong> – explica la regla general de 3 años y retención más larga para situaciones específicas
+          <br><a href="https://www.irs.gov/es/businesses/small-businesses-self-employed/recordkeeping" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/businesses/small-businesses-self-employed/recordkeeping</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+      </div>
+
+      <div class="resource-item">
+        <h3>Centro de Recursos del IRS para Trabajadores por Cuenta Propia y Pequeños Negocios</h3>
+        <div class="resource-link">
+          <strong>• Publicaciones y Formularios del IRS para Trabajadores por Cuenta Propia</strong> – lista central de publicaciones tributarias para negocios
+          <br><a href="https://www.irs.gov/es/businesses/small-businesses-self-employed/publications-and-forms-for-the-self-employed" target="_blank" rel="noopener noreferrer">https://www.irs.gov/es/businesses/small-businesses-self-employed/publications-and-forms-for-the-self-employed</a>
+          <div class="resource-source">IRS en Español</div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -248,6 +361,9 @@
     const langToggle = document.getElementById('langToggle');
     let currentLang = localStorage.getItem('language') || 'en';
 
+    const resourcesEn = document.getElementById('resources-en');
+    const resourcesEs = document.getElementById('resources-es');
+
     function initLanguage() {
       if (currentLang === 'es') {
         langToggle.classList.add('active');
@@ -271,6 +387,14 @@
           el.textContent = el.getAttribute('data-en');
         }
       });
+      // Toggle resource sections
+      if (lang === 'es') {
+        resourcesEn.style.display = 'none';
+        resourcesEs.style.display = 'block';
+      } else {
+        resourcesEn.style.display = 'block';
+        resourcesEs.style.display = 'none';
+      }
     }
 
     langToggle.addEventListener('click', function() {
